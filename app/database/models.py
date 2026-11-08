@@ -28,7 +28,7 @@ class Claim(Base):
     id = Column(Integer, primary_key=True)
     research_run_id = Column(Integer, ForeignKey("research_runs.id"))
     claim_text = Column(Text)
-    verfication_status = Column(String(50), default="unverified")
+    verification_status = Column(String(50), default="unverified")
     confidence_score = Column(Float, nullable=True)
 
 class HumanFeedback(Base):
